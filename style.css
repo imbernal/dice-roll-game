@@ -1,0 +1,20 @@
+body{
+	background-image: url('img/background.png');
+}
+
+#dieContainer{
+	position: relative;
+	left: 10%;
+}
+
+#dieContainer img{
+	cursor: pointer;
+}
+
+#dieContainer h4{
+	position: absolute;
+	font-size: 50px;
+	left: 17%;
+	top:16%;
+	cursor: pointer;
+}

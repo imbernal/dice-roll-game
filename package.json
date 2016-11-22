@@ -1,0 +1,24 @@
+{
+  "name": "dice-roll-game-own",
+  "version": "1.0.0",
+  "description": "dice roll app",
+  "main": "index.html",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/imbernal/dice-roll-game"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-js":"browserify js/custom.js -o js/bundle.js"
+  },
+  "author": "imbernal",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-preset-latest": "^6.16.0",
+    "babelify": "^7.3.0",
+    "browserify": "^13.1.1"
+  },
+  "browserify":{
+  	"transform":[["babelify", {"presets":["es2015"]}]]
+  }
+}
