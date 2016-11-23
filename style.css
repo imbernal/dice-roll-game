@@ -1,20 +1,73 @@
 body{
 	background-image: url('img/background.png');
+	background-size: cover;
 }
 
 #dieContainer{
 	position: relative;
-	left: 10%;
+	left: 50%;
+	margin-top:28%;
+	width: 25%;
+
 }
 
 #dieContainer img{
 	cursor: pointer;
+	width: 50%;
 }
 
 #dieContainer h4{
 	position: absolute;
-	font-size: 50px;
-	left: 17%;
-	top:16%;
+	font-size: 35px;
+	left: 21%;
+	top:10%;
 	cursor: pointer;
+}
+
+.players{
+	position: absolute;
+	top: 12%;
+	left: 4%;
+}
+.players img{
+	width: 8%;
+}
+
+.players p{
+	display: inline-block;
+	position: absolute;
+	top: -50%;
+	left: 3%;
+}
+
+#p2{
+	left: 16%;
+}
+
+.data{
+	margin-left: 41%;
+}
+table{
+	position: absolute;
+	left: 33%;
+	top: 40%;
+}
+
+table td{
+	background-image: url('img/tile.jpg');
+	background-size: cover;
+	width: 50px;
+	height: 50px;
+	border: 2px solid black;
+	transition: all .5s;
+}
+
+
+.players #hillary{
+	padding-right: 4%
+}
+
+.moving{
+	animation-duration: .5s;
+	animation-fill-mode: forwards;
 }
