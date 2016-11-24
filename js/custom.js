@@ -4,9 +4,9 @@ const player = require('./_playerClass.js');
 
 const play = require('./_play.js');
 
-var player1 = new player.player("hillary" , 0 , 0, 1 , true);
+var player1 = new player.player("hillary" , 0 , 0, 0 , true);
 
-var player2 = new player.player("trump" , 0 , 0 , 1 , false);
+var player2 = new player.player("trump" , 0 , 0 , 0 , false);
 
 var whoPLay = null;
 

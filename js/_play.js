@@ -2,7 +2,13 @@ function play(currentNum , player){
 
 		
 		var totalMovePositions = 0;
+		var hillaryHaveImage = false;
+		var tileImage = false;
 		var currentPosition = player.currentPosition;
+
+		document.querySelectorAll('#sections td').forEach(function(item){
+			console.log($(item).attr('id'));
+		});
 
 		if (currentNum + currentPosition > 12){
 			totalMovePositions = 12;
@@ -12,21 +18,28 @@ function play(currentNum , player){
 
 		for (let i = currentPosition ; i <= totalMovePositions ; i++){
 
-			setTimeout(function(){
-				var currentImage = $("#sec" + i).css("background-image");
-				console.log($("#sec" + i).css("background-image"));
-				if(currentImage.includes('hillary')){
+			var currentImage = "";
 
-					
+			setTimeout(function(){
+				
+			},100);
+
+			setTimeout(function(){
+				var aux = i+1;
+
+				if(player.name=="hillary"){
 					$("#sec" + i).css("background-image",  "url('img/hillary.png')");	
 				}else
 					$("#sec" + i).css("background-image",  "url('img/trump.png')");
-				
+
 			} , 200 * i);
 			
 			setTimeout(function(){
-				$("#sec" + (i-1)).css("background-image",  "url('img/tile.jpg')");
-			},230*i)
+
+				if(tileImage)
+					$("#sec" + (i-1)).css("background-image",  "url('img/tile.jpg')");
+				
+			},230*i);
 
 			setTimeout(function(){
 				$('#Statistics').click(function(){

@@ -9,30 +9,40 @@ function moveDode() {
 module.exports.die = moveDode;
 
 },{}],2:[function(require,module,exports){
-"use strict";
+'use strict';
 
 function play(currentNum, player) {
 
 	var totalMovePositions = 0;
+	var hillaryHaveImage = false;
+	var tileImage = false;
 	var currentPosition = player.currentPosition;
+
+	document.querySelectorAll('#sections td').forEach(function (item) {
+		console.log($(item).attr('id'));
+	});
 
 	if (currentNum + currentPosition > 12) {
 		totalMovePositions = 12;
 	} else totalMovePositions = currentNum + currentPosition;
 
 	var _loop = function _loop(i) {
+		currentImage = "";
+
+
+		setTimeout(function () {}, 100);
 
 		setTimeout(function () {
-			var currentImage = $("#sec" + i).css("background-image");
-			console.log($("#sec" + i).css("background-image"));
-			if (currentImage.includes('hillary')) {
+			var aux = i + 1;
 
+			if (player.name == "hillary") {
 				$("#sec" + i).css("background-image", "url('img/hillary.png')");
 			} else $("#sec" + i).css("background-image", "url('img/trump.png')");
 		}, 200 * i);
 
 		setTimeout(function () {
-			$("#sec" + (i - 1)).css("background-image", "url('img/tile.jpg')");
+
+			if (tileImage) $("#sec" + (i - 1)).css("background-image", "url('img/tile.jpg')");
 		}, 230 * i);
 
 		setTimeout(function () {
@@ -44,6 +54,8 @@ function play(currentNum, player) {
 	};
 
 	for (var i = currentPosition; i <= totalMovePositions; i++) {
+		var currentImage;
+
 		_loop(i);
 	}
 
@@ -107,9 +119,9 @@ var player = require('./_playerClass.js');
 
 var play = require('./_play.js');
 
-var player1 = new player.player("hillary", 0, 0, 1, true);
+var player1 = new player.player("hillary", 0, 0, 0, true);
 
-var player2 = new player.player("trump", 0, 0, 1, false);
+var player2 = new player.player("trump", 0, 0, 0, false);
 
 var whoPLay = null;
 
