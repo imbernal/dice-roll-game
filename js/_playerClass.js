@@ -1,18 +1,19 @@
 class PLayer{
-	constructor(name,winsCant, loseCant,currentPosition , isMyTurn){
+	constructor(name,winsCant, loseCant,currentPosition , isMyTurn , rivalPosition){
 		this.winsCant = winsCant;
 		this.loseCant = loseCant;
 		this.name = name;
 		this.currentPosition = currentPosition;
 		this.isMyTurn = isMyTurn;
+		this.rivalPosition = rivalPosition;
 	}
 
 	addWinsCont(){
-		return this.winsCant++;
+		this.winsCant += 1;
 	}
 
 	addloseCant(){
-		return this.loseCant++;
+		this.loseCant +=1;
 	}
 
 	playerCurrentPosition(currentPosition){
@@ -21,8 +22,23 @@ class PLayer{
 
 	}
 
+	setRivalPosition(rivalPosition){
+
+		this.rivalPosition = rivalPosition;	
+
+	}
+
 	iPlayed(isMyTurn){
 		this.isMyTurn = isMyTurn;
+	}
+
+	setPlayer(){
+		this.currentPosition =0;
+		this.rivalPosition = 0;
+	}
+
+	setIsmyTurn(val){
+		this.isMyTurn = val;
 	}
 }
 

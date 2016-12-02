@@ -3,20 +3,16 @@
 <head>
 	<title>Dice-roll-game</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 </head>
 <body>
 
 	<div class="players">
-			<p id="p1">P1</p>
+		
 			<img id="hillary" src="img/hillary.png">
-			<p id="p2">P2</p>
+		
 			<img id="trump" src="img/trump.png">
 	
-	</div>
-
-	<div class="data">
-		<h3 id="data"></h3>
-		<button id="Statistics">Statistics</button>
 	</div>
 
 	<table>
@@ -41,10 +37,31 @@
 		<h4></h4>
 	</div>
 
+	<div class="modal fade" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Statistics</h4>
+      </div>
+      <div class="modal-body">
+        <p id="trumpStadistics"></p>
+        <p id="hillaryStadistics"></p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" id="gameAgain" class="btn btn-primary">Game Again</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+	
+
+
 	<script
   src="https://code.jquery.com/jquery-3.1.1.min.js"
   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
   crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 	<script type="text/javascript" src="js/bundle.js"></script>
 </body>
 </html>
